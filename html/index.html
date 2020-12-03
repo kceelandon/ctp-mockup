@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kcee Landon">
+    <meta name="description" content="CTP Mockup">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Brotherhood of Chi Theta Psi - Home</title>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <div class="logo">
+            <img src="../img/ctp.jpg" style="width:100px;height:100px;">
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li class="first"><a class="current" href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Members">The Kuyas</a></li>
+                    <li><a href="#Gallery">Gallery</a></li>
+                    <li class="last"><a href="#Contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="home-header">
+        <h1>Welcome to the Brotherhood of Chi Theta Psi!</h1>
+    </div>
+    
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="../img/naruto.jpg" style="width:100%">
+          <div class="text">random pic</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="../img/jujutsu.png" style="width:100%">
+          <div class="text">another random pic</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="../img/hxh.jpg" style="width:100%">
+          <div class="text">different random pic</div>
+        </div>
+        
+    </div>
+    <br>
+        
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+
+    <div class="info">
+        <h2>Academic Excellence</h2>
+        <h2>Community Service</h2>
+        <h2>Cultural Awareness</h2>
+        <h2>Unity</h2>
+    </div>
+        
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3200); // Change image every 2 seconds
+        }
+    </script>
+        
+</body>
+</html> 
